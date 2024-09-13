@@ -1,98 +1,111 @@
+/* Tarjetas principales */
 .example-card {
-  padding: 30px 20px 30px 20px;
-  background-color: #448AFF;
-  margin-bottom: 10px;
-  border-radius: 0;
-  border-color: black;
-  border-width: 2px;
+  padding: 20px;
+  background-color: #E3F2FD;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.container{
-  padding: 10px 30px 30px 40px;
+.example-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card{
-  display: flex;
-}
-
-.title,.sub-title{
-  padding-top: 20px;
-}
-
+/* Cabecera */
 .title {
-  padding-left: 40px;
-}
-.content{
-  min-width: 200px;
-  padding-right: 30px;
-  padding-left: 20px;
-}
-
-.tech{
-  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1565C0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.localization {
-  padding-right: 5%;
-  padding-left: 40px;
-  padding-top:20px;
+/* Contenedor de información */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-#header {
-  min-width: 300px;
+.tech-info {
+  flex: 1;
+  padding-right: 20px;
 }
 
-.yellowStar {
-  color:yellow;
+.tech-photo img {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
 
+/* Estrellas de calificación */
 .stars {
-  display: block;
-  padding: 5% 5%;
+  display: flex;
+  gap: 5px;
+  font-size: 1.5rem;
+  color: #FFD700;
 }
 
-.circle{
-  color: #448AFF;
-  padding-left: 50%;
-  padding-top: 5%;
+/* Botones */
+.actions button {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-.comments{
-  padding-left: 60px;
-  padding-right: 60px;
+.actions button:hover {
+  background-color: #0d47a1;
+  color: white;
 }
 
-.review{
-  background-color: #72B4EF;
-  padding-top: 5%;
-  padding-bottom: 5%;
+/* Reseñas */
+.reviews-section {
+  margin-top: 20px;
 }
 
+.review {
+  background-color: #90CAF9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Estilo de Google Maps */
 .googleApi {
-  height: 80%;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-tech-card{
-  padding: 5% 10%;
-  margin-top: 2%;
-}
-
-.container img.techPhoto{
-  height: 220px;
-}
-
-.request{
-  padding: 30px;
-}
-
-.name{
-  padding-right: 230px;
-}
-
-@media (max-width: 768px){
+/* Adaptabilidad */
+@media (max-width: 768px) {
   .card {
-    display: block;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tech-photo img {
+    margin-bottom: 20px;
+  }
+
+  .actions {
+    justify-content: center;
   }
 }
-
-
